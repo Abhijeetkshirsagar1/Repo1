@@ -1,0 +1,15 @@
+<template>
+  <lightning-card>
+    <div>
+      <h2>Name:Abhijeet Kshirsagar</h2>
+      <lightning-input label="Username" type="email" required value={email} onchange={handleEmailChange}></lightning-input>
+      <lightning-input label="Password" type="password" required value={password} onchange={handlePasswordChange}></lightning-input>
+      <lightning-button variant="brand" label="Login" onclick={handleLoginClick}></lightning-button>
+    </br>
+    
+    <a target="_blank" onclick={handleForgotPasswordClick}> Forget Password?</a> <br/>
+      <div class={errorMessageClass}>{errorMessage}</div>
+      <div class={successMessageClass}>{successMessage}</div>
+    </div>
+  </lightning-card>
+  </template>

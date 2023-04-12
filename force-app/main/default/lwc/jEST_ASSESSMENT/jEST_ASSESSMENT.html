@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Abhijeet Kshirsagar">
+        <lightning-combobox
+        name="Enter Account Name"
+        label="Account Name"
+        value={value}
+        placeholder="Select Account Name"
+        options={names} class="slds-m-left_x-small"
+        onchange={handleChange} ></lightning-combobox>
+    </br>
+        <!-- Base variant: Makes a button look like a link -->
+        <lightning-button variant="brand" label="Edit Account" title="Edit Account"  onclick={handleEditClick} class="slds-m-left_x-small"></lightning-button>
+       
+        <lightning-button variant="brand" label="Display Account" title="Display Account" onclick={handleDisplay} class="slds-m-left_x-small"></lightning-button>
+</br>
+        <lightning-datatable key-field="id"  data={accRecords} columns={columns}>
+        </lightning-datatable>
+    </br>
+    </lightning-card>
+</template>

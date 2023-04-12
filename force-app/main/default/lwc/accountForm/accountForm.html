@@ -1,0 +1,23 @@
+<template>
+    <lightning-layout multiple-rows>
+
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+            large-device-size="12">
+            <c-account-form></c-account-form>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+            large-device-size="12">
+            <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+            large-device-size="12">
+            <lightning-button variant="brand" label="Get Acounts" title="Get Acounts"
+                onclick={handleGetAccounts}></lightning-button> </lightning-layout-item>
+    </lightning-layout>
+    <h2> Account Datatable</h2>
+    <template if:true={accountList}>
+        <lightning-datatable data={accountList} columns={columns} key-field="Id">
+        </lightning-datatable>
+    </template>
+
+</template>
